@@ -22,9 +22,19 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Usage information? To include screenshots, Github URL, and webpage URL',
-    name: 'usage',
+    message: 'Usage information: Github URL.',
+    name: 'git',
   },
+  {
+  type: 'input',
+  message: 'Usage information: Webpage URL.',
+  name: 'web',
+},
+{
+type: 'input',
+message: 'Usage information: Screenshot(s).',
+name: 'screen',
+},
   {
     type: 'input',
     message: 'Who are the contributors on this project?',
@@ -40,6 +50,11 @@ const questions = [
     message: 'Which license are you using?',
     name: 'license',
     choices: ['MIT', 'Apache', 'BSD']
+  },
+  {
+    type: 'input',
+    message: 'Please provide your email adress',
+    name: 'email',
   },
 ];
 

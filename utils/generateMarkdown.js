@@ -58,7 +58,10 @@ ${data.description}
 ${data.installation}
 
 ## Usage
-${data.usage}
+
+[Webpage](${data.web})
+
+![Screenshot](images/${data.screen})
 
 ## Contributing
 ${data.contributors}
@@ -68,6 +71,12 @@ ${data.instructions}
 
 ## License
 ${renderLicenseSection(data.license)}
+
+## Questions
+If you have anyquestions don't hesitate to contact us with the information listed below.
+
+You can find our GitHub here: [GitHub](${data.git}) or
+You can email us here: ${data.email}.
 `;
 }
 
