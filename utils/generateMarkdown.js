@@ -43,11 +43,15 @@ function generateMarkdown(data) {
   console.log(data);
   return `
 # ${data.title}
+
 ${renderLicenseBadge(data.license)}
+
 ## Description
+
 ${data.description}
 
 ## Table of Contents
+
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -56,6 +60,7 @@ ${data.description}
 * [Questions](#questions)
 
 ## Installation
+
 ${data.installation}
 
 ## Usage
@@ -65,15 +70,19 @@ A link to the webpage is provided here: [Webpage](${data.web})
 ![Screenshot](${data.screen})
 
 ## Contributing
+
 ${data.contributors}
 
 ## Tests
+
 ${data.instructions}
 
 ## License
+
 ${renderLicenseSection(data.license)}
 
 ## Questions
+
 If you have anyquestions don't hesitate to contact us with the information listed below.
 
 You can find our GitHub here: [GitHub](${data.git})
