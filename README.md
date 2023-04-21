@@ -11,6 +11,7 @@ For this project we wanted to create a program that had the basic layout of a RE
 * [Contributing](#contributing)
 * [Instructions](#instructions)
 * [License](#license)
+* [Questions](#questions)
 
 ## Installation
 Clone the repo to your VS code. Then, in the terminal do "npm i" to download the data bases used in this case it is iquirer. Finally, do node index.js inside the termianl and follow the prompts.
@@ -19,7 +20,7 @@ Clone the repo to your VS code. Then, in the terminal do "npm i" to download the
 
 A link to the webpage is provided here: [Webpage](https://sweetkloid.github.io/readme-generator/)
 
-![DemoVideo](images/Untitled_%20Apr%2020,%202023%208_23%20PM.avi)
+![demo video](images/Untitled_%20Apr%2020,%202023%208_23%20PM.avi)
 
 ## Contributing
 Thanks to the teacher, TA's, and classmates for helping me make this project possible.
