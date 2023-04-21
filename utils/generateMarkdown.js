@@ -53,15 +53,16 @@ ${data.description}
 * [Contributing](#contributing)
 * [Instructions](#instructions)
 * [License](#license)
+* [Questions](#questions)
 
 ## Installation
 ${data.installation}
 
 ## Usage
 
-[Webpage](${data.web})
+A link to the webpage is provided here: [Webpage](${data.web})
 
-![Screenshot](images/${data.screen})
+![Screenshot](${data.screen})
 
 ## Contributing
 ${data.contributors}
@@ -75,8 +76,9 @@ ${renderLicenseSection(data.license)}
 ## Questions
 If you have anyquestions don't hesitate to contact us with the information listed below.
 
-You can find our GitHub here: [GitHub](${data.git}) or
-You can email us here: ${data.email}.
+You can find our GitHub here: [GitHub](${data.git})
+
+You can email us here: ${data.email}
 `;
 }
 

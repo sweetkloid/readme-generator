@@ -20,19 +20,15 @@ const questions = [
     message: 'What are the steps required to install your project? If any.',
     name: 'installation',
   },
-  {
-    type: 'input',
-    message: 'Usage information: Github URL.',
-    name: 'git',
-  },
+  
   {
   type: 'input',
-  message: 'Usage information: Webpage URL.',
+  message: 'Provide the Webpage URL.',
   name: 'web',
 },
 {
 type: 'input',
-message: 'Usage information: Screenshot(s).',
+message: 'Please provide the file folder insturctions here for your screenshot.',
 name: 'screen',
 },
   {
@@ -50,6 +46,11 @@ name: 'screen',
     message: 'Which license are you using?',
     name: 'license',
     choices: ['MIT', 'Apache', 'BSD']
+  },
+  {
+    type: 'input',
+    message: 'Please add your Github URL.',
+    name: 'git',
   },
   {
     type: 'input',
