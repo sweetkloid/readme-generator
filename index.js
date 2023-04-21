@@ -20,7 +20,11 @@ const questions = [
     message: 'What are the steps required to install your project? If any.',
     name: 'installation',
   },
-  
+  {
+    type: 'input',
+    message: 'Please provide the usages for this project.',
+    name: 'usage',
+  },
   {
   type: 'input',
   message: 'Provide the Webpage URL.',

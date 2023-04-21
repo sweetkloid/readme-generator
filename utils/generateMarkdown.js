@@ -59,6 +59,8 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ## Usage
+  
+ ${data.usage}
 
   A link to the webpage is provided here: [Webpage](${data.web})
 
