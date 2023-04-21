@@ -1,35 +1,31 @@
-//Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 
+//this creates a badge when the user enters a license type
 function renderLicenseBadge(license) {
   if (license === 'MIT') {
     return '![License: MIT](https://img.shields.io/badge/license-MIT-ff69b4) ';
-  }else if (license === 'Apache'){
+  } else if (license === 'Apache') {
     return '![License: Apache](https://img.shields.io/badge/license-Apache-brightgreen) '
 
-  } else if (license === 'BSD'){
+  } else if (license === 'BSD') {
     return '![License: Apache](https://img.shields.io/badge/license-BSD-blue) '
-  }else {
+  } else {
     return '';
   }
 }
-//Create a function that returns the license link
-// If there is no license, return an empty string
+//This is the link to the license depending on which license the user selects
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return 'https://opensource.org/licenses/MIT';
-  }else if (license === 'Apache'){
-    return '(https://opensource.org/license/apache-2-0/)' 
-  } else if (license === 'BSD'){
+  } else if (license === 'Apache') {
+    return '(https://opensource.org/license/apache-2-0/)'
+  } else if (license === 'BSD') {
     return '(https://opensource.org/license/bsd-1-clause/)'
-  }else {
+  } else {
     return '';
   }
 }
 
-
-// Create a function that returns the license section of README
-// If there is no license, return an empty string
+//this is where the license link is set up to be used by the readme template
 function renderLicenseSection(license) {
   if (license) {
     return `This project is licensed under the ${license} license. Click [here](${renderLicenseLink(license)}) for more information.`;
@@ -37,58 +33,57 @@ function renderLicenseSection(license) {
     return '';
   }
 }
-// Create a function to generate markdown for README
-// Create a function to generate markdown for README
+//this is the markdown template for the readme
 function generateMarkdown(data) {
   console.log(data);
   return `
-# ${data.title}
+  # ${data.title}
 
-${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge(data.license)}
 
-## Description
+  ## Description
 
-${data.description}
+  ${data.description}
 
-## Table of Contents
+  ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Instructions](#instructions)
-* [License](#license)
-* [Questions](#questions)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Instructions](#instructions)
+  * [License](#license)
+  * [Questions](#questions)
 
-## Installation
+  ## Installation
 
-${data.installation}
+  ${data.installation}
 
-## Usage
+  ## Usage
 
-A link to the webpage is provided here: [Webpage](${data.web})
+  A link to the webpage is provided here: [Webpage](${data.web})
 
-![Screenshot](${data.screen})
+  ![Screenshot](${data.screen})
 
-## Contributing
+  ## Contributing
 
-${data.contributors}
+  ${data.contributors}
 
-## Tests
+  ## Tests
 
-${data.instructions}
+  ${data.instructions}
 
-## License
+  ## License
 
-${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}
 
-## Questions
+  ## Questions
 
-If you have anyquestions don't hesitate to contact us with the information listed below.
+  If you have anyquestions don't hesitate to contact us with the information listed below.
 
-You can find our GitHub here: [GitHub](${data.git})
+  You can find our GitHub here: [GitHub](${data.git})
 
-You can email us here: ${data.email}
-`;
+  You can email us here: ${data.email}
+  `;
 }
 
 module.exports = generateMarkdown;

@@ -1,9 +1,9 @@
-// Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 const fs = require('fs');
 
-// Create an array of questions for user input
+// The input array that node will use in the terminal
 const questions = [
   {
     type: 'input',
@@ -37,15 +37,15 @@ name: 'screen',
     name: 'contributors',
   },
   {
-    type: 'input',
+    type: 'input', //open ended input by user
     message: 'Any instructions for users?',
     name: 'instructions',
   },
   {
-    type: 'list',
+    type: 'list', //provides options to users
     message: 'Which license are you using?',
     name: 'license',
-    choices: ['MIT', 'Apache', 'BSD']
+    choices: ['MIT', 'Apache', 'BSD', 'none']
   },
   {
     type: 'input',
@@ -59,7 +59,7 @@ name: 'screen',
   },
 ];
 
-// Create a function to write README file
+// This converts the answers (data) to a README file
 function writeToFile(fileName, data) {
   const markdown = generateMarkdown(data);
   fs.writeFile(fileName, markdown, (err) => {
@@ -71,7 +71,7 @@ function writeToFile(fileName, data) {
   });
 }
 
-// Create a function to initialize app
+// This starts the input and creats the readme file
 function init() {
   inquirer.prompt(questions)
     .then((data) => {
